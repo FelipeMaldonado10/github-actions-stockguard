@@ -22,6 +22,13 @@ inventario de un producto:
 `stock_actual` negativo o `stock_minimo <= 0` son entradas inválidas y lanzan
 `ValueError`.
 
+### Regla de sobrestock
+
+`detectar_sobrestock(stock_actual, stock_minimo)` devuelve `True` cuando el stock
+supera tres veces el mínimo requerido, es decir cuando el capital inmovilizado en
+inventario es excesivo. El límite es estricto: con mínimo 20, un stock de 60 todavía
+es normal y 61 ya es sobrestock.
+
 Ejemplo: con mínimo 20 y 7 unidades, el resultado es `CRITICO`, porque 7 es menor o
 igual a la mitad de 20 (10).
 
